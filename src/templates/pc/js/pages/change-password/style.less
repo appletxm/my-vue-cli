@@ -1,0 +1,41 @@
+
+@input-row-height: .44rem;
+
+.change-password{
+    padding: .3rem .6rem;
+    .input-row {
+      label{
+        color:@black;
+        font-size: @font-xs;
+        line-height: @input-row-height;
+        vertical-align: top;
+      }
+      input {
+        position: relative;
+        border: 1px solid @gray;
+        color: @black-middle;
+        font-size: @font-xs;
+        margin-bottom: .15rem;
+        width: 4.5rem;
+        line-height: @input-row-height;
+        height: @input-row-height;
+        padding: .1rem;
+        &:extend(.input-style);
+
+        &:focus{
+          border-color: @orange;
+        }
+      }
+    }
+    .input-row-margin {
+      margin-left: -.33rem
+    }
+      
+  .ui-btn-big{
+    position: relative;
+    width: 4.5rem;
+    height: .45rem;
+    margin-left: .6rem;
+    margin-top: .15rem;
+  }     
+}

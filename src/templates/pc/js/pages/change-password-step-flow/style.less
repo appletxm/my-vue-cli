@@ -1,0 +1,73 @@
+.module-change-password{
+  padding: .67rem 0;
+  width: 8rem;
+
+  .component-step-flow{
+    width: 6rem;
+    margin: auto;
+  }
+
+  .step-con-panel{
+    width: 4rem;
+    margin: .6rem auto .3rem auto;
+
+    .tip-title{
+      padding: .2rem 0;
+      b{
+        font-size: @font-l;
+        color: @blue;
+      }
+    }
+  }
+
+  .input-row {
+    position: relative;
+    &:extend(.single-edit-page .input-row);
+    label{
+      color:@black
+    }
+    input {
+      border: 1px solid @gray;
+      padding: .1rem 0 .1rem .1rem;
+      .border-radius(@border-radius);
+      &:focus{
+        border-color: @orange;
+      }
+    }
+
+    .valid-code{
+      right: .15rem;
+    }
+  }
+
+  .btn-row{
+    width: 4rem;
+    margin: 0 auto;
+
+    button{
+      &:extend(.absolute-position);
+      margin: 0;
+      width: 98%;
+    }
+  }
+
+  .has-prev-step{
+    button{
+      width: 45%;
+
+      &:nth-of-type(2){
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+  
+  .ui-btn-big{
+    position: relative;
+    width: 3.05rem;
+    height: .45rem;
+    margin-left: .67rem;
+    margin-top: .3rem;
+  }
+        
+}

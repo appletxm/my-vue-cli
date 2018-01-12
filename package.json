@@ -1,0 +1,22 @@
+{
+  "name": "my-vue-cli",
+  "version": "v0.0.1",
+  "private": true,
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "yeoman-vue-cli"
+  ],
+  "author": "appletang",
+  "license": "ISC",
+  "dependencies": {
+    "del": "^2.2.0",
+    "yeoman-generator": "^0.23.3"
+  },
+  "nodejs": {
+    "version": ">=8.0"
+  }
+}

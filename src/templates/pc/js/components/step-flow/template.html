@@ -1,0 +1,6 @@
+<ul class="component-step-flow">
+  <li v-for="(item, index) in stepsData" :key="item.id" v-bind:class="[activeIndex ===  index ? 'actived' : '']">
+    <span>{{ item.name}}</span>
+    <b></b>
+  </li>
+</ul>

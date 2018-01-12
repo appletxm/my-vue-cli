@@ -1,0 +1,8 @@
+<header class="app-header">
+  <button :class="[isCodeShow ? 'show-code' : '']" @click="$toggleCode">
+    点我可以显示二维码加关注
+    <p>
+      <img :src="rcCodeImg" />
+    </p>
+  </button>
+</header>

@@ -1,0 +1,11 @@
+<nav class="app-nav">
+  <div class="logo"></div>
+  <div class="module-name">{{moduleName}}</div>
+  <ul class="menu">
+    <li v-for="(nav, index) in navList" :class="['cell', $store.state.currentModule === nav.parentModuleName ? 'nav-actived' : '']">
+      <span :class="[nav.icon ? nav.icon : '']" @click="$changeNav(nav, $event)">{{ nav.title }}</span>
+      <b v-if="index < navList.length - 1"></b>
+      <tips-menu v-if="nav.children && nav.children.length > 0" :list="nav.children" v-model="helpTipsMenuShow" :change-module-cb="changeSubModuleCb"></tips-menu>
+    </li>
+  </ul>
+</nav>

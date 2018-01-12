@@ -1,0 +1,34 @@
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+     transition: @transition;
+}
+
+.transform(@deg){
+  transform: rotate(@deg);
+  -ms-transform: rotate(@deg); 	/* IE 9 */
+  -moz-transform: rotate(@deg); 	/* Firefox */
+  -webkit-transform: rotate(@deg); /* Safari 和 Chrome */
+  -o-transform: rotate(@deg);
+}
+
+.animate(@animate){
+  animation: @animate;
+  -webkit-animation: @animate; /* Safari 和 Chrome */
+}
+
+.box-shadow(@shadow){
+  box-shadow: @shadow;
+  -webkit-box-shadow: @shadow; /* Safari 和 Chrome */
+}
+
+.font-smoothing(){
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}

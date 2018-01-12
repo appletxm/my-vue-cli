@@ -1,0 +1,51 @@
+<section class="module-login module-register single-edit-page">
+  <app-header></app-header>
+
+  <div class="login-box">
+    <p class="logo"></p>
+
+    <div class="title">
+      <b>注册新账户</b>
+      <a href="/login.html">返回登录页</a>
+    </div>
+
+    <div class="input-panel">
+      <div class="input-row">
+        <input type="tel" value="" placeholder="请输入手机号" v-model="mobile" maxlength="11" autocomplete="off" @blur='$doCheckMobile'
+        />
+      </div>
+      <div class="input-row">
+        <input type="tel" value="" placeholder="验证码" v-model="verifyCode" maxlength="6" autocomplete="off" />
+        <count-down class="count-down-style" :max-time="maxTimeLength" :mobile="mobile" @get-unique-id='$getUniqueId'></count-down>
+      </div>
+      <div class="input-row">
+        <input type="password" value="" placeholder="6-15位密码" v-model="password" maxlength="15" autocomplete="off" />
+      </div>
+      <div class="input-row">
+        <input type="password" value="" placeholder="确认密码" v-model="confirmPwd" maxlength="15" autocomplete="off" />
+      </div>
+      <div class="input-row">
+        <input type="text" value="" placeholder="姓名" v-model="realName" maxlength="17" autocomplete="off" />
+      </div>
+      <div class="input-row">
+        <input type="text" value="" placeholder="电子邮箱" v-model="email" maxlength="32" autocomplete="off" />
+      </div>
+      <div class="contract-row">
+        <el-checkbox v-model="isAgreeContract"></el-checkbox>
+        <span class="contract">
+          我已阅读并同意
+          <a @click="$checkContract">《环贸快版用户协议》</a>
+        </span>
+      </div>
+      <div class="input-row btn-row">
+        <button class="ui-btn-big rf-iconfont icon-add1" @click="$doRegister">
+          注册
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+
+  <contract :is-contract-show="isShowContract" :confirm-cb="contrimContractCb"></contract>
+</section>

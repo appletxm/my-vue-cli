@@ -1,0 +1,28 @@
+<section class="module-login single-edit-page">
+  <app-header></app-header>
+  <div class="login-box">
+    <p class="logo"></p>
+    <div class="input-panel">
+      <div class="input-row input-selected">
+        <input type="tel" value="" placeholder="请输入手机号" v-model="mobile" maxlength="11" autocomplete="off" />
+      </div>
+
+      <div class="input-row">
+        <input type="password" value="" placeholder="请输入密码" v-model="password" maxlength="16" autocomplete="off" />
+      </div>
+
+      <div class="input-row btn-row">
+        <button class="ui-btn-big rf-iconfont icon-account" @click="$doLogin">
+          立即登录
+        </button>
+      </div>
+
+      <div class="input-row two-cell">
+        <a class="btn-get-pass" href="/reset-password.html">忘记密码？</a>
+        <a class="btn-new-user" href="/register.html">+ 注册新账户</a>
+      </div>
+
+    </div>
+  </div>
+  <app-footer></app-footer>
+</section>

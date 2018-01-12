@@ -1,0 +1,113 @@
+
+@login-panel-height: 4rem;
+@login-panel-width: 4.3rem;
+@blue-belt-height: .8rem;
+@input-row-height: .48rem;
+@btn-big-height: .46rem;
+
+.module-login{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background :@black-dark url(../../../assets/images/bg.jpg) center center;
+  text-align: center;
+
+  .logo{
+    width: 4.16rem;
+    height: .93rem;
+    background: url("../../../assets/images/logo-b.png") no-repeat;
+    display: inline-block;
+    margin-bottom: .4rem;
+  }
+
+  .login-box{
+    width: @login-panel-width;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -@login-panel-height/2 -@login-panel-width/2;
+    height: @login-panel-height;
+  }
+}
+
+.single-edit-page{
+  .title{
+    line-height: .4rem;
+    overflow: hidden;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: @con-gap;
+    margin-bottom: @con-gap*2;
+
+    b{
+      font-size: @font-xl;
+      color: @white;
+      font-weight: normal;
+    }
+
+    a{
+      float: right;
+      color: @white;
+      font-size: @font-xs;
+    }
+  }
+
+  .input-row{
+    height: @input-row-height;
+    position: relative;
+    color: @black-middle;
+    font-size: @font-xs;
+    margin-bottom: @page-gap;
+
+    input{
+      padding: 0 .1rem;
+      height: @input-row-height - .02rem;
+      width: @login-panel-width - .02rem;
+      .border-radius(@border-radius);
+      &:extend(.input-style);
+
+      &:focus{
+        border-color: @orange;
+      }
+    }
+
+    .rf-iconfont{
+      position: absolute;
+      left: 0;
+      top: .12rem;
+      z-index: 1;
+    }
+
+    .btn-get-pass{
+      float: left;
+    }
+
+    .btn-new-user{
+      float: right;
+    }
+  }
+
+  .btn-row{
+    height: 1rem;
+    border: 0;
+    position: relative;
+
+    .ui-btn-big{
+      top: 50%;
+      left: 0;
+      height: @btn-big-height;
+    }
+  }
+
+  .two-cell{
+    height: .2rem;
+    border: 0;
+    margin-top: -.15rem;
+
+    a{
+      color: @white;
+    }
+  }
+}

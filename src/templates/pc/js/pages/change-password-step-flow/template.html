@@ -1,0 +1,55 @@
+<div class="module-change-password">
+	<step-flow :active-index="activeIndex" :steps-data="steps"></step-flow>
+
+	<div class="step-con-panel" v-show="activeIndex === 0">
+		<p class="tip-title">已绑定手机：
+			<b>{{mobileFormat}}</b>，请验证</p>
+		<div class="input-row">
+			<input type="tel" value="" placeholder="验证码" v-model="verifyCode" maxlength="6" autocomplete="off" />
+			<count-down :max-time="maxTimeLength" :mobile="mobile" @get-unique-id='$getUniqueId'></count-down>
+		</div>
+	</div>
+
+	<div class="step-con-panel" v-show="activeIndex === 1">
+		<div class="input-row">
+			<label>新密码：</label>
+			<input type="password" value="" placeholder="6-15位新密码" maxlength="16" autocomplete="off" v-model='newPwd' />
+		</div>
+
+		<div class="input-row input-row-margin">
+			<label>确认新密码：</label>
+			<input type="password" value="" placeholder="确认新密码" maxlength="16" autocomplete="off" v-model='confirmPwd' />
+		</div>
+	</div>
+
+	<div :class="['input-row btn-row', isMiddelStesp ? 'has-prev-step' : '']" v-show="!isFlowCompleted">
+		<button class="ui-btn-big" @click='$goToPrevStep'>
+			上一步
+		</button>
+		<button class="ui-btn-big" @click='$goToNextStep'>
+			下一步
+		</button>
+	</div>
+
+
+	<!-- <div class="input-row">
+		<label>原密码：</label>
+		<input type="password" value="" placeholder="原密码" maxlength="16" autocomplete="off" v-model='oldPwd' />
+	</div>
+
+	<div class="input-row">
+		<label>新密码：</label>
+		<input type="password" value="" placeholder="6-15位新密码" maxlength="16" autocomplete="off" v-model='newPwd' />
+	</div>
+
+	<div class="input-row input-row-margin">
+		<label>确认新密码：</label>
+		<input type="password" value="" placeholder="确认新密码" maxlength="16" autocomplete="off" v-model='confirmPwd' />
+	</div>
+
+	<div class="input-row btn-row">
+		<button class="ui-btn-big" @click='$doChangePass'>
+			提交
+		</button>
+	</div> -->
+</div>

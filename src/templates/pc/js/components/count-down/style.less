@@ -1,0 +1,22 @@
+.component-count-down{
+    button{
+      width: 1rem;
+      height: .3rem;
+      border: 1px solid @blue;
+      position: absolute;
+      right: .1rem;
+      background: @white;
+      color: @blue;
+      top: .08rem;
+      .border-radius(@border-radius);
+      &:extend(button);
+
+      span{
+        color: @black-light;
+      }
+
+      &:disabled{
+        border-color: @black-light-l;
+      }
+    }
+}

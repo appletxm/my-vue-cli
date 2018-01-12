@@ -1,0 +1,35 @@
+.app-header{
+  line-height: .24rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  button{
+    float: right;
+    padding: .05rem .1rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    font-size: @font-xxs;
+    position: relative;
+    background: transparent;
+    color: @white;
+    margin: @page-gap;
+    .border-radius(@border-radius);
+    
+    p{
+      width: 1.66rem;
+      position: absolute;
+      left: 0;
+      top: .34rem;
+      height: 0;
+      overflow: hidden;
+      .transition(height 0.2s ease);
+    }
+
+    &.show-code{
+      p{
+        height: 1.66rem; 
+      }
+    }
+  }
+}
